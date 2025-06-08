@@ -35,7 +35,7 @@ const HomePage = () => {
             transition={{ delay: 0.2, duration: 0.5, type: "spring", stiffness: 120 }}
             className="inline-block p-4 bg-brand-java/20 rounded-full mb-6"
           >
-            <img  alt="Tax preparation icon" className="w-16 h-16 text-brand-java" src="https://images.unsplash.com/photo-1643101448770-d508b0cfe8bf" />
+            <img alt="Tax preparation icon" className="w-16 h-16 text-brand-java" src="https://images.unsplash.com/photo-1643101448770-d508b0cfe8bf" />
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="block gradient-text">C. Free Virtual Tax Services</span>
@@ -66,8 +66,13 @@ const HomePage = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-         <img alt="Crystal Free, Enrolled Agent" className="rounded-lg shadow-xl w-full max-w-md mx-auto md:mx-0" src="/crystal_headshot.jpg"/>
-              </motion.div>
+          >
+            <img 
+              alt="Crystal Free, Enrolled Agent" 
+              className="rounded-lg shadow-xl w-full max-w-md mx-auto md:mx-0" 
+              src="/crystal_headshot.jpg" 
+            />
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -119,60 +124,4 @@ const HomePage = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 * index + 0.5, duration: 0.5 }}
-            >
-              <Card className="h-full text-center hover:shadow-brand-java/30 hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
-                  <div className="mx-auto bg-brand-tarawera p-3 rounded-full inline-block mb-4">
-                    {feature.icon}
-                  </div>
-                  <CardTitle className="text-brand-java">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-description">{feature.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-         <div className="mt-10 text-center">
-            <Card className="max-w-2xl mx-auto p-6">
-                <CardHeader>
-                    <div className="mx-auto bg-brand-tarawera p-3 rounded-full inline-block mb-4">
-                        <Award className="h-8 w-8 text-brand-green" />
-                    </div>
-                    <CardTitle className="text-brand-java">The Enrolled Agent Advantage</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-description">
-                        Enrolled Agents (EAs) are federally-licensed tax practitioners who specialize in taxation and also have unlimited rights to represent taxpayers before the Internal Revenue Service. Choosing an EA means you're working with a professional who has demonstrated special competence in tax matters through a rigorous IRS examination.
-                    </p>
-                </CardContent>
-            </Card>
-        </div>
-      </section>
-
-      <section className="py-12 bg-brand-shark/30 rounded-xl shadow-lg">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 gradient-text">Ready to Simplify Your Taxes?</h2>
-          <p className="text-lg text-description mb-8 max-w-2xl mx-auto">
-            Our secure Intuit Link portal makes document sharing a breeze. Get started today and experience a hassle-free tax season with an expert Enrolled Agent.
-          </p>
-          <Link to="/privacy-security">
-            <Button variant="outline" className="border-brand-java text-brand-java hover:bg-brand-java hover:text-brand-black mr-4 mb-2 sm:mb-0">
-              Learn About Security
-            </Button>
-          </Link>
-          <Link to="/contact">
-            <Button className="bg-brand-green text-brand-black hover:bg-brand-green/80">
-              Contact Us
-            </Button>
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default HomePage;
+              animate={{ opacity:
