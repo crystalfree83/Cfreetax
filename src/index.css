@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 200 20% 98%; 
+		--foreground: 210 40% 9.8%; 
+
+		--card: 0 0% 100%;
+		--card-foreground: 210 40% 9.8%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 210 40% 9.8%;
+
+		--primary: 190 80% 45%; 
+		--primary-foreground: 0 0% 100%; 
+
+		--secondary: 200 10% 90%; 
+		--secondary-foreground: 210 40% 9.8%;
+
+		--muted: 200 10% 90%;
+		--muted-foreground: 210 20% 50%; /* Adjusted for better readability */
+
+		--accent: 125 96% 48%; 
+		--accent-foreground: 0 0% 0%; 
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 0 0% 98%;
+
+		--border: 200 20% 90%;
+		--input: 200 20% 85%;
+		--ring: 190 80% 45%; 
+
+		--radius: 0.5rem;
+
+    /* Brand Colors */
+    --brand-iron: #cbcdce; /* Main text color for dark backgrounds */
+    --brand-green: #05f318;
+    --brand-java: #12aacb;
+    --brand-black: #040404;
+    --brand-nevada: #7f8284; /* Lighter than original #5d5f60 for better contrast if needed, or use iron */
+    --brand-blue-chill: #0f758d;
+    --brand-deep-sea-green: #0b5464;
+    --brand-shark: #2e2f30;
+    --brand-tarawera: #063946;
+    --brand-tiber: #052931;
+	}
+
+	.dark {
+		--background: 210 40% 9.8%; 
+		--foreground: 0 0% 98%;
+
+		--card: 210 40% 12.8%;
+		--card-foreground: 0 0% 98%;
+
+		--popover: 210 40% 12.8%;
+		--popover-foreground: 0 0% 98%;
+
+		--primary: 190 80% 55%; 
+		--primary-foreground: 210 40% 9.8%;
+
+		--secondary: 210 40% 15.8%;
+		--secondary-foreground: 0 0% 98%;
+
+		--muted: 210 40% 15.8%;
+		--muted-foreground: 200 10% 70%; /* Adjusted for better readability */
+
+		--accent: 125 96% 52%; 
+		--accent-foreground: 0 0% 0%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+
+		--border: 210 40% 20.8%;
+		--input: 210 40% 20.8%;
+		--ring: 190 80% 55%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+    @apply font-sans;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+	}
+  #root {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+  h1 { @apply text-4xl md:text-5xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+
+  /* Use brand-iron for general text on dark backgrounds for better readability */
+  .text-main {
+    @apply text-brand-iron;
+  }
+  .text-subtle {
+    @apply text-brand-nevada; /* For less important text, ensure it's light enough */
+  }
+  .text-description {
+    @apply text-slate-300; /* A slightly lighter grey for descriptions */
+  }
+
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glassmorphism {
+  background: rgba(46, 47, 48, 0.2); /* Using shark color with alpha for dark glassmorphism */
+  border: 1px solid rgba(203, 205, 206, 0.1); /* Using iron color with alpha for border */
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-java to-brand-blue-chill;
+}
