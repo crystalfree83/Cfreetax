@@ -67,7 +67,7 @@ const HomePage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <img  alt="Crystal Free, Enrolled Agent" className="rounded-lg shadow-xl w-full max-w-md mx-auto md:mx-0" src="https://photos.app.goo.gl/4t3Bvf4PxWJs9qpeA" />
+            <img  alt="Crystal Free, Enrolled Agent" className="rounded-lg shadow-xl w-full max-w-md mx-auto md:mx-0" src="<img src="/crystal_headshot.jpg" alt="Crystal Free headshot" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
