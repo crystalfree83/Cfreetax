@@ -9,18 +9,6 @@ const HomePage = () => {
     <div className="max-w-5xl mx-auto py-12 px-4 md:px-8">
       <Card className="shadow-2xl bg-brand-shark text-main border-brand-tarawera">
         <CardHeader className="text-center">
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.4 }}
-            className="inline-flex items-center justify-center bg-white p-4 rounded-full mb-4 shadow-md"
-          >
-            <img
-              src="/ea_bw_050118.jpg"
-              alt="IRS Enrolled Agent Logo"
-              className="h-20 w-20 object-contain"
-            />
-          </motion.div>
           <CardTitle className="text-3xl gradient-text">C. Free Virtual Tax Services</CardTitle>
           <CardDescription className="text-description mt-2">
             Taxes done by a certified Enrolled Agent. Fast. Secure. 100% virtual.
