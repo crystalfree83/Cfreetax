@@ -13,12 +13,12 @@ const HomePage = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.4 }}
-            className="inline-block p-3 bg-brand-java/20 rounded-full mb-4"
+            className="inline-flex items-center justify-center bg-white p-4 rounded-full mb-4 shadow-md"
           >
             <img
               src="/ea_bw_050118.jpg"
               alt="IRS Enrolled Agent Logo"
-              className="h-12 w-12 object-contain"
+              className="h-20 w-20 object-contain"
             />
           </motion.div>
           <CardTitle className="text-3xl gradient-text">C. Free Virtual Tax Services</CardTitle>
