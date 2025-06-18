@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { UserCheck } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -16,7 +15,11 @@ const HomePage = () => {
             transition={{ delay: 0.1, duration: 0.4 }}
             className="inline-block p-3 bg-brand-java/20 rounded-full mb-4"
           >
-            <UserCheck size={32} className="text-brand-java" />
+            <img
+              src="/ea_bw_050118.jpg"
+              alt="IRS Enrolled Agent Logo"
+              className="h-12 w-12 object-contain"
+            />
           </motion.div>
           <CardTitle className="text-3xl gradient-text">C. Free Virtual Tax Services</CardTitle>
           <CardDescription className="text-description mt-2">
